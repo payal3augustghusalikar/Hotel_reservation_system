@@ -8,7 +8,6 @@ public class Hotel {
 
         this.hotelName = hotelName;
         this.rates = rates;
-
     }
 
     public String getHotelName() {
@@ -17,6 +16,10 @@ public class Hotel {
 
     public void setHotelName(String hotelName) {
         this.hotelName = hotelName;
+    }
+
+    public String toString() {
+        return "Hotel [ hotelName = " + hotelName + ", Rates are = " + rates + "]" + "\n";
     }
 }
 
