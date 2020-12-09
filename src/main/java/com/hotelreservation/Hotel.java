@@ -2,12 +2,14 @@ package com.hotelreservation;
 
 public class Hotel {
     String hotelName;
-    int rates;
+    int weekDaysRate;
+    int weekendRates;
 
-    public Hotel(String hotelName, int rates) {
+    public Hotel(String hotelName,  int weekDaysRate, int weekendRates) {
 
         this.hotelName = hotelName;
-        this.rates = rates;
+        this.weekDaysRate = weekDaysRate;
+        this.weekendRates = weekendRates;
     }
 
     public String getHotelName() {
@@ -18,8 +20,30 @@ public class Hotel {
         this.hotelName = hotelName;
     }
 
+
+    public int getWeekDaysRate() {
+        return weekDaysRate;
+    }
+
+    public void setWeekDaysRate(int weekDaysRate) {
+        this.weekDaysRate = weekDaysRate;
+    }
+
+    public int getWeekendRates() {
+        return weekendRates;
+    }
+
+    public void setWeekendRates(int weekendRates) {
+        this.weekendRates = weekendRates;
+    }
+
+    @Override
     public String toString() {
-        return "Hotel [hotelName=" + hotelName + ", Rates are =" + rates + "]" + "\n";
+        return "Hotel{" +
+                "hotelName='" + hotelName + '\'' +
+                ", weekDaysRate=" + weekDaysRate +
+                ", weekendRates=" + weekendRates +
+                '}';
     }
 }
 
